@@ -23,7 +23,9 @@ def detectlocation(dx,dy):
 
 def detectmap(dx,dy):
 	for location in location_list:
-		if (location.x == (Player.x + dx)) and (location.y == (Player.y + dy)):
+		if (dx == 0) and (dy == 0):
+			return "@"
+		elif (location.x == (Player.x + dx)) and (location.y == (Player.y + dy)):
 			return location.mapsymbol
 			break	
 	else:
@@ -33,19 +35,20 @@ def detectmap(dx,dy):
 #is placed on the screen, as to "refresh" and create a game-like GUI
 def showmap():
 	clear()
-	xcount = -6
-	ycount = -4
+	xcount = -8
+	ycount = 6
 	print ""
-	while xcount <= 6:
+	while xcount <= 8:
 		xcount += 1
-		if xcount < 6:
+		if (xcount < 8):
 			print str(detectmap(xcount,ycount)),
-		if xcount == 6:
-			xcount = -6
-			print str(detectmap(xcount,ycount))
-			ycount += 1
 
-		if ycount == 4:
+		if (xcount == 8):
+			xcount = -8
+			print str(detectmap(xcount,ycount))
+			ycount -= 1
+
+		if (ycount == -6):
 			break	
 
 	print ""
