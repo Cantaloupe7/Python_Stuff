@@ -1,0 +1,5 @@
+print str(detectmap(-3,2)) + str(detectmap(-2,2)) + str(detectmap(-1,2)) + str(detectmap(0,2)) + str(detectmap(1,2)) + str(detectmap(2,2)) + str(detectmap(3,2))
+	print str(detectmap(-3,1)) + str(detectmap(-2,1)) + str(detectmap(-1,1)) + str(detectmap(0,1)) + str(detectmap(1,1)) + str(detectmap(2,1)) + str(detectmap(3,1))
+	print str(detectmap(-3,0)) + str(detectmap(-2,0)) + str(detectmap(-1,0)) + "@"                 + str(detectmap(1,0)) + str(detectmap(2,0)) + str(detectmap(3,0))
+	print str(detectmap(-3,-1)) + str(detectmap(-2,-1)) + str(detectmap(-1,-1)) + str(detectmap(0,-1)) + str(detectmap(1,-1)) + str(detectmap(2,-1)) + str(detectmap(3,-1))
+	print str(detectmap(-3,-2)) + str(detectmap(-2,-2)) + str(detectmap(-1,-2)) + str(detectmap(0,-2)) + str(detectmap(1,-2)) + str(detectmap(2,-2)) + str(detectmap(3,-2))

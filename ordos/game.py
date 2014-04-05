@@ -11,6 +11,8 @@ By Brian Gregory
 from classes.characters import*
 from functions.playercmds import*
 from functions.generalfunctions import*
+#import sys
+#from termcolor import colored, cprint
 
 # for functions with arguments given as direct imput from the player, see functions.playercmds
 # for functions with arguments given by variables\me\no args, see functions.generalfunctions

@@ -9,7 +9,7 @@ def clear():
 		os.system('clear')
 	else:
 		clear_l = "\n" * 100
-		print clear_l
+		print str(clear_l)
 
 # Checks location list (see classes.charachters) for any location objects at the player's coords or
 # plus a certain x (dx) or y (dy) value to check a desired location near the player,
@@ -33,12 +33,21 @@ def detectmap(dx,dy):
 #is placed on the screen, as to "refresh" and create a game-like GUI
 def showmap():
 	clear()
+	xcount = -6
+	ycount = -4
 	print ""
-	print str(detectmap(-3,2)) + str(detectmap(-2,2)) + str(detectmap(-1,2)) + str(detectmap(0,2)) + str(detectmap(1,2)) + str(detectmap(2,2)) + str(detectmap(3,2))
-	print str(detectmap(-3,1)) + str(detectmap(-2,1)) + str(detectmap(-1,1)) + str(detectmap(0,1)) + str(detectmap(1,1)) + str(detectmap(2,1)) + str(detectmap(3,1))
-	print str(detectmap(-3,0)) + str(detectmap(-2,0)) + str(detectmap(-1,0)) + "@"                 + str(detectmap(1,0)) + str(detectmap(2,0)) + str(detectmap(3,0))
-	print str(detectmap(-3,-1)) + str(detectmap(-2,-1)) + str(detectmap(-1,-1)) + str(detectmap(0,-1)) + str(detectmap(1,-1)) + str(detectmap(2,-1)) + str(detectmap(3,-1))
-	print str(detectmap(-3,-2)) + str(detectmap(-2,-2)) + str(detectmap(-1,-2)) + str(detectmap(0,-2)) + str(detectmap(1,-2)) + str(detectmap(2,-2)) + str(detectmap(3,-2))
+	while xcount <= 6:
+		xcount += 1
+		if xcount < 6:
+			print str(detectmap(xcount,ycount)),
+		if xcount == 6:
+			xcount = -6
+			print str(detectmap(xcount,ycount))
+			ycount += 1
+
+		if ycount == 4:
+			break	
+
 	print ""
 	detectlocation(0,0)
 	print str(Player.name) + " is at " + str(Player.x) + "," + str(Player.y) + ", " + str(Player.id_location.name)
